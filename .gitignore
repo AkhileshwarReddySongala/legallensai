@@ -51,7 +51,8 @@ secrets.yaml
 *~
 .DS_Store
 Thumbs.db
-
+.agents/
+.gstack/
 # ===========================
 # FastAPI / Uvicorn
 # ===========================

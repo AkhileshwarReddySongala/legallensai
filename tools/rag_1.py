@@ -2,12 +2,11 @@ import os
 from pinecone import Pinecone
 from llama_index.vector_stores.pinecone import PineconeVectorStore
 from llama_index.core import VectorStoreIndex, StorageContext, Settings
-from llama_index.core.embeddings.mock_embed_model import MockEmbedding
 from dotenv import load_dotenv
 
 load_dotenv()
 
-Settings.embed_model = MockEmbedding(embed_dim=1536)
+Settings.embed_model = local
 # 1. Initialize Connection
 pc = Pinecone(api_key=os.getenv("PINECONE_API_KEY"))
 pinecone_index = pc.Index("legal-lens-index")

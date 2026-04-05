@@ -22,6 +22,7 @@ def ingest_local_pdfs(folder_path):
         print(f"--- Processing {file_name} ---")
         file_path = os.path.join(folder_path, file_name)
         
+        
         # Load the PDF
         documents = reader.load(file_path=file_path)
         records_to_upsert = []
