@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>LegalLens AI | The Clinical Authority</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "error-container": "#ffdad6",
+                        "on-tertiary": "#ffffff",
+                        "inverse-primary": "#b0c8eb",
+                        "surface-container-low": "#f2f4f6",
+                        "on-primary-container": "#768dad",
+                        "secondary-fixed": "#d5e3fc",
+                        "on-surface": "#191c1e",
+                        "on-error-container": "#93000a",
+                        "tertiary": "#001209",
+                        "surface-container-highest": "#e0e3e5",
+                        "surface-tint": "#49607e",
+                        "on-tertiary-container": "#1a9e70",
+                        "primary-container": "#0a2540",
+                        "on-tertiary-fixed-variant": "#005137",
+                        "surface-bright": "#f7f9fb",
+                        "inverse-surface": "#2d3133",
+                        "on-tertiary-fixed": "#002114",
+                        "on-primary-fixed": "#001c37",
+                        "on-primary-fixed-variant": "#314865",
+                        "surface-container-lowest": "#ffffff",
+                        "error": "#ba1a1a",
+                        "inverse-on-surface": "#eff1f3",
+                        "on-surface-variant": "#43474d",
+                        "surface-container": "#eceef0",
+                        "secondary-fixed-dim": "#b9c7df",
+                        "secondary": "#515f74",
+                        "tertiary-fixed-dim": "#68dba9",
+                        "surface-variant": "#e0e3e5",
+                        "surface-dim": "#d8dadc",
+                        "on-secondary-fixed": "#0d1c2e",
+                        "on-secondary-container": "#57657a",
+                        "on-secondary-fixed-variant": "#3a485b",
+                        "tertiary-fixed": "#85f8c4",
+                        "secondary-container": "#d5e3fc",
+                        "primary": "#000f22",
+                        "primary-fixed-dim": "#b0c8eb",
+                        "on-secondary": "#ffffff",
+                        "outline": "#74777e",
+                        "surface-container-high": "#e6e8ea",
+                        "primary-fixed": "#d2e4ff",
+                        "outline-variant": "#c4c6ce",
+                        "on-error": "#ffffff",
+                        "surface": "#f7f9fb",
+                        "on-background": "#191c1e",
+                        "background": "#f7f9fb",
+                        "tertiary-container": "#002a1b",
+                        "on-primary": "#ffffff"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "fontFamily": {
+                        "headline": ["Manrope"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    }
+                },
+            },
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f7f9fb;
+        }
+
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+
+        .grain-texture {
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+            opacity: 0.02;
+            pointer-events: none;
+        }
+
+        .ambient-shadow {
+            box-shadow: 0 12px 40px 0 rgba(25, 28, 30, 0.05);
+        }
+
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(20px);
+        }
+    </style>
+</head>
+
+<body
+    class="bg-surface text-on-surface selection:bg-primary-fixed selection:text-on-primary-fixed overflow-hidden h-screen flex">
+    <div class="fixed inset-0 grain-texture z-50"></div>
+    <!-- Predicted Component: SideNavBar -->
+    <aside
+        class="fixed left-0 top-0 h-full z-40 flex flex-col bg-slate-50 dark:bg-slate-900 h-screen w-64 border-r-0 font-manrope tracking-tight font-medium">
+        <div class="p-8">
+            <h1 class="text-xl font-bold text-slate-900 dark:text-slate-50 uppercase tracking-widest">LegalLens AI</h1>
+            <p class="text-[0.6875rem] font-label tracking-[0.1em] text-slate-500 uppercase mt-1">The Clinical Authority
+            </p>
+        </div>
+        <nav class="flex-1 px-4 space-y-2">
+            <!-- Active Tab: Dashboard -->
+            <a class="flex items-center gap-3 px-4 py-3 text-slate-900 dark:text-white font-bold border-r-2 border-slate-900 dark:border-white hover:bg-slate-200/50 dark:hover:bg-slate-800 transition-all scale-98 active:opacity-80"
+                href="#">
+                <span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+                <span>Dashboard</span>
+            </a>
+            <a class="flex items-center gap-3 px-4 py-3 text-slate-500 dark:text-slate-400 hover:text-slate-700 dark:hover:text-slate-200 hover:bg-slate-200/50 dark:hover:bg-slate-800 transition-colors"
+                href="#">
+                <span class="material-symbols-outlined" data-icon="folder_open">folder_open</span>
+                <span>Document Vault</span>
+            </a>
+            <a class="flex items-center gap-3 px-4 py-3 text-slate-500 dark:text-slate-400 hover:text-slate-700 dark:hover:text-slate-200 hover:bg-slate-200/50 dark:hover:bg-slate-800 transition-colors"
+                href="#">
+                <span class="material-symbols-outlined" data-icon="analytics">analytics</span>
+                <span>Analysis Hub</span>
+            </a>
+            <a class="flex items-center gap-3 px-4 py-3 text-slate-500 dark:text-slate-400 hover:text-slate-700 dark:hover:text-slate-200 hover:bg-slate-200/50 dark:hover:bg-slate-800 transition-colors"
+                href="#">
+                <span class="material-symbols-outlined" data-icon="gavel">gavel</span>
+                <span>Risk Library</span>
+            </a>
+            <a class="flex items-center gap-3 px-4 py-3 text-slate-500 dark:text-slate-400 hover:text-slate-700 dark:hover:text-slate-200 hover:bg-slate-200/50 dark:hover:bg-slate-800 transition-colors mt-auto"
+                href="#">
+                <span class="material-symbols-outlined" data-icon="settings">settings</span>
+                <span>Settings</span>
+            </a>
+        </nav>
+        <div class="p-6">
+            <button
+                class="w-full bg-primary-container text-on-primary-container hover:bg-primary-fixed-dim transition-colors py-4 rounded-lg flex items-center justify-center gap-2 font-bold tracking-tight">
+                <span class="material-symbols-outlined" data-icon="add_circle">add_circle</span>
+                New Analysis
+            </button>
+        </div>
+    </aside>
+    <!-- Predicted Component: TopAppBar -->
+    <header
+        class="fixed top-0 right-0 left-64 h-16 px-8 flex items-center justify-between z-30 bg-white/80 dark:bg-slate-950/80 backdrop-blur-xl border-b border-slate-100 dark:border-slate-800 shadow-sm dark:shadow-none font-inter text-sm font-medium">
+        <div class="flex items-center gap-8 flex-1">
+            <div class="relative w-full max-w-md">
+                <span
+                    class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 text-lg">search</span>
+                <input
+                    class="w-full bg-slate-100 dark:bg-slate-900 border-none rounded-lg pl-10 pr-4 py-2 focus:ring-2 focus:ring-primary focus:bg-white transition-all text-sm"
+                    placeholder="Search archives or analysis..." type="text" />
+            </div>
+            <nav class="hidden md:flex items-center gap-6">
+                <a class="text-slate-900 dark:text-white border-b-2 border-slate-900 dark:border-white pb-1 duration-200 ease-in-out"
+                    href="#">Documents</a>
+                <a class="text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition-opacity duration-200"
+                    href="#">Recent Reports</a>
+                <a class="text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition-opacity duration-200"
+                    href="#">Archives</a>
+            </nav>
+        </div>
+        <div class="flex items-center gap-4">
+            <button
+                class="bg-primary text-on-primary px-4 py-2 rounded-lg hover:bg-primary-container transition-colors duration-200 flex items-center gap-2">
+                <span class="material-symbols-outlined text-sm">upload_file</span>
+                Upload Document
+            </button>
+            <div class="flex items-center gap-2 ml-4">
+                <button class="p-2 text-slate-500 hover:bg-slate-100 rounded-lg transition-colors">
+                    <span class="material-symbols-outlined">notifications</span>
+                </button>
+                <button class="p-2 text-slate-500 hover:bg-slate-100 rounded-lg transition-colors">
+                    <span class="material-symbols-outlined">help_outline</span>
+                </button>
+                <div class="w-8 h-8 rounded-full overflow-hidden ml-2 bg-slate-200">
+                    <img class="w-full h-full object-cover"
+                        data-alt="professional portrait of a legal expert in a clean studio environment with soft natural lighting"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuB8DN_57oTdz0uCNQoW6QIc6SIb6MvzPGEQN43Gb7Txy9DUeJDkNLjxsFtAY6n1GdhGwKWNH2oR-QZm8830NS_1FSZuAfhoRaRnhrGNTVQr43gYVONHsjPh_h5QDCH9PtxW4U1MB3fp-PV3IgDjR05xZceYy4vHFE-hmS7cpeGcBKBJJAjjD264HPu_zeV71zT0Jzt0GkJs40uG8rZ-JIYD4oV4r4N4IBCztchuHCIIom2gP9KtDJ2RplGxktlH0Ye1Gbb_LtyRhhXP" />
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Main Content Canvas -->
+    <main class="ml-64 mt-16 flex-1 overflow-y-auto p-8 relative">
+        <div class="max-w-[1400px] mx-auto flex flex-col gap-8">
+            <!-- Dashboard Header Section -->
+            <div class="flex justify-between items-end">
+                <div>
+                    <h2
+                        class="text-display-lg font-headline font-extrabold text-primary leading-tight tracking-tight text-5xl">
+                        Analysis Hub</h2>
+                    <p class="text-secondary font-body mt-2 text-lg">Upload your medical or legal documentation for
+                        institutional-grade auditing.</p>
+                </div>
+                <div class="flex gap-4">
+                    <div class="bg-surface-container-low px-6 py-4 rounded-xl flex items-center gap-4">
+                        <div class="text-right">
+                            <p class="text-xs font-label uppercase tracking-widest text-secondary">Tokens Remaining</p>
+                            <p class="font-bold text-primary">1,240 / 5,000</p>
+                        </div>
+                        <div
+                            class="w-12 h-12 rounded-full border-4 border-primary-container border-t-outline-variant rotate-45">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Bento Layout Content -->
+            <div class="grid grid-cols-12 gap-8">
+                <!-- Left: Upload Zone (Asymmetric Large) -->
+                <div class="col-span-12 lg:col-span-8 group">
+                    <div
+                        class="bg-surface-container-lowest h-full min-h-[500px] rounded-xl border-2 border-dashed border-outline-variant hover:border-primary transition-all flex flex-col items-center justify-center p-12 text-center ambient-shadow relative overflow-hidden">
+                        <iframe id="document-preview"
+                            class="hidden w-full h-full absolute inset-0 z-10 bg-white"></iframe>
+
+                        <div id="loading-overlay"
+                            class="hidden w-full h-full absolute inset-0 z-30 bg-white/80 backdrop-blur-sm flex flex-col items-center justify-center">
+                            <div
+                                class="w-12 h-12 rounded-full border-4 border-primary border-t-transparent animate-spin">
+                            </div>
+                            <p class="font-bold text-primary text-lg mt-4 shadow-sm" id="loading-text">Analyzing
+                                Context...</p>
+                        </div>
+
+                        <div id="upload-ui-content" class="flex flex-col items-center justify-center relative z-20">
+                            <div
+                                class="absolute inset-0 bg-primary/0 group-hover:bg-primary/[0.01] transition-colors pointer-events-none">
+                            </div>
+                            <div
+                                class="w-24 h-24 bg-surface-container-low rounded-full flex items-center justify-center mb-8 group-hover:scale-110 transition-transform duration-500">
+                                <span class="material-symbols-outlined text-4xl text-primary"
+                                    style="font-variation-settings: 'FILL' 1;">cloud_upload</span>
+                            </div>
+                            <h3 class="text-2xl font-headline font-bold text-primary mb-2">Drop your document here</h3>
+                            <p class="text-secondary font-body max-w-sm mb-8">We support high-density medical PDFs,
+                                clinical
+                                trials, and multi-clause commercial leases up to 50MB.</p>
+                            <div class="flex gap-4">
+                                <input type="file" id="fileUploadInput" class="hidden" accept=".pdf,.jpeg,.jpg,.png" />
+                                <button id="uploadBtn" onclick="document.getElementById('fileUploadInput').click()"
+                                    class="bg-primary text-on-primary px-10 py-4 rounded-lg font-bold tracking-tight hover:shadow-lg transition-all active:scale-95">
+                                    Upload Document
+                                </button>
+                                <button
+                                    class="bg-surface-container text-primary px-10 py-4 rounded-lg font-bold tracking-tight border border-outline-variant hover:bg-surface-container-high transition-all">
+                                    URL Import
+                                </button>
+                            </div>
+                            <div class="mt-12 flex items-center gap-6 text-slate-400">
+                                <div class="flex items-center gap-2"><span
+                                        class="material-symbols-outlined text-sm">security</span> HIPAA Compliant</div>
+                                <div class="flex items-center gap-2"><span
+                                        class="material-symbols-outlined text-sm">lock</span> E2E Encryption</div>
+                                <div class="flex items-center gap-2"><span
+                                        class="material-symbols-outlined text-sm">history</span> Version Control</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Right: Traffic Light Report (The Sidebar) -->
+                <div class="col-span-12 lg:col-span-4 flex flex-col gap-6">
+                    <div
+                        class="bg-primary text-on-primary p-8 rounded-xl ambient-shadow flex flex-col justify-between overflow-hidden relative min-h-[220px]">
+                        <div class="z-10">
+                            <p class="text-xs font-label uppercase tracking-widest text-on-primary-container mb-1">
+                                Global Sentiment</p>
+                            <h4 id="global-sentiment-title" class="text-4xl font-headline font-extrabold mb-4">Moderate
+                                Risk</h4>
+                            <p id="global-sentiment-desc" class="text-sm opacity-80 leading-relaxed">Based on the last 5
+                                analyzed documents, we've
+                                identified recurring predatory indemnity clauses.</p>
+                        </div>
+                        <div class="absolute -right-12 -bottom-12 w-48 h-48 bg-white/5 rounded-full blur-3xl"></div>
+                    </div>
+                    <!-- Traffic Light Section -->
+                    <div class="bg-white rounded-xl p-8 ambient-shadow space-y-6">
+                        <div class="flex items-center justify-between mb-4">
+                            <h5 class="font-bold text-primary">Traffic Light Report</h5>
+                            <span
+                                class="text-xs font-label text-secondary uppercase bg-surface-container px-2 py-1 rounded">Real-time
+                                Analysis</span>
+                        </div>
+                        <!-- Red Zone -->
+                        <div id="traffic-light-container">
+                            <div class="group cursor-pointer">
+                                <div
+                                    class="flex items-start gap-4 p-4 rounded-lg hover:bg-error-container/20 transition-colors">
+                                    <div class="w-1.5 h-12 bg-error rounded-full shrink-0 mt-1"></div>
+                                    <div>
+                                        <div class="flex items-center gap-2 mb-1">
+                                            <span
+                                                class="text-[10px] font-label font-bold text-error uppercase tracking-widest px-2 py-0.5 bg-error-container rounded">High-Risk</span>
+                                            <span class="text-xs font-label text-on-surface-variant italic">Clause
+                                                4.2</span>
+                                        </div>
+                                        <p class="text-sm font-semibold text-on-surface mb-1">Predatory Arbitration</p>
+                                        <p class="text-xs text-on-surface-variant line-clamp-2">Mandatory waiver of jury
+                                            trial with exorbitant filing fees in foreign jurisdiction.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Yellow Zone -->
+                            <div class="group cursor-pointer">
+                                <div
+                                    class="flex items-start gap-4 p-4 rounded-lg hover:bg-tertiary-fixed/20 transition-colors">
+                                    <div class="w-1.5 h-12 bg-on-tertiary-fixed-variant rounded-full shrink-0 mt-1">
+                                    </div>
+                                    <div>
+                                        <div class="flex items-center gap-2 mb-1">
+                                            <span
+                                                class="text-[10px] font-label font-bold text-on-tertiary-fixed uppercase tracking-widest px-2 py-0.5 bg-tertiary-fixed rounded">Caution</span>
+                                            <span class="text-xs font-label text-on-surface-variant italic">Clause
+                                                11.5</span>
+                                        </div>
+                                        <p class="text-sm font-semibold text-on-surface mb-1">Ambiguous Termination</p>
+                                        <p class="text-xs text-on-surface-variant line-clamp-2">Definition of
+                                            "Satisfactory
+                                            Performance" lacks measurable KPI benchmarks.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Green Zone -->
+                            <div class="group cursor-pointer">
+                                <div
+                                    class="flex items-start gap-4 p-4 rounded-lg hover:bg-on-tertiary-container/10 transition-colors">
+                                    <div class="w-1.5 h-12 bg-on-tertiary-container rounded-full shrink-0 mt-1"></div>
+                                    <div>
+                                        <div class="flex items-center gap-2 mb-1">
+                                            <span
+                                                class="text-[10px] font-label font-bold text-on-tertiary-container uppercase tracking-widest px-2 py-0.5 bg-on-tertiary-container/20 rounded">Safe</span>
+                                            <span class="text-xs font-label text-on-surface-variant italic">Clause
+                                                1.0</span>
+                                        </div>
+                                        <p class="text-sm font-semibold text-on-surface mb-1">Clear Scope of Service</p>
+                                        <p class="text-xs text-on-surface-variant line-clamp-2">Responsibilities are
+                                            explicitly defined with no hidden operational costs.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <button
+                            class="w-full mt-4 py-3 text-xs font-bold uppercase tracking-widest text-primary border border-outline-variant hover:bg-surface-container transition-colors rounded-lg">
+                            View Full Risk Map
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!-- Recent Activity: Cards Layout -->
+            <section class="mt-8">
+                <div class="flex items-center justify-between mb-8">
+                    <h3 class="text-2xl font-headline font-bold text-primary">Recent Analyses</h3>
+                    <a class="text-sm font-semibold text-primary hover:underline flex items-center gap-2" href="#">
+                        View All <span class="material-symbols-outlined text-lg">arrow_right_alt</span>
+                    </a>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Activity Card 1 -->
+                    <div
+                        class="bg-surface-container-lowest p-6 rounded-xl ambient-shadow hover:-translate-y-1 transition-transform cursor-pointer border border-transparent hover:border-outline-variant">
+                        <div class="flex justify-between items-start mb-6">
+                            <div class="bg-slate-100 p-3 rounded-lg">
+                                <span class="material-symbols-outlined text-slate-600">medical_services</span>
+                            </div>
+                            <span
+                                class="text-[10px] font-bold uppercase tracking-tighter text-on-tertiary-container bg-on-tertiary-container/10 px-2 py-1 rounded">Processed</span>
+                        </div>
+                        <h4 class="font-bold text-on-surface mb-1">Patient Consent Form V4</h4>
+                        <p class="text-xs text-on-surface-variant mb-6">Uploaded 2 hours ago • 14 Pages</p>
+                        <div class="flex items-center gap-2">
+                            <div class="flex -space-x-2">
+                                <div class="w-6 h-6 rounded-full bg-error border-2 border-white"></div>
+                                <div class="w-6 h-6 rounded-full bg-on-tertiary-fixed border-2 border-white"></div>
+                                <div class="w-6 h-6 rounded-full bg-on-tertiary-container border-2 border-white"></div>
+                            </div>
+                            <span class="text-[10px] font-label text-on-surface-variant">3 Action items</span>
+                        </div>
+                    </div>
+                    <!-- Activity Card 2 -->
+                    <div
+                        class="bg-surface-container-lowest p-6 rounded-xl ambient-shadow hover:-translate-y-1 transition-transform cursor-pointer border border-transparent hover:border-outline-variant">
+                        <div class="flex justify-between items-start mb-6">
+                            <div class="bg-slate-100 p-3 rounded-lg">
+                                <span class="material-symbols-outlined text-slate-600">description</span>
+                            </div>
+                            <span
+                                class="text-[10px] font-bold uppercase tracking-tighter text-on-tertiary-container bg-on-tertiary-container/10 px-2 py-1 rounded">Processed</span>
+                        </div>
+                        <h4 class="font-bold text-on-surface mb-1">Commercial Lease Agreement</h4>
+                        <p class="text-xs text-on-surface-variant mb-6">Uploaded 5 hours ago • 82 Pages</p>
+                        <div class="flex items-center gap-2">
+                            <div class="flex -space-x-2">
+                                <div class="w-6 h-6 rounded-full bg-error border-2 border-white"></div>
+                                <div class="w-6 h-6 rounded-full bg-error border-2 border-white"></div>
+                                <div class="w-6 h-6 rounded-full bg-on-tertiary-fixed border-2 border-white"></div>
+                            </div>
+                            <span class="text-[10px] font-label text-on-surface-variant">12 High risks found</span>
+                        </div>
+                    </div>
+                    <!-- Activity Card 3 -->
+                    <div
+                        class="bg-surface-container-lowest p-6 rounded-xl ambient-shadow hover:-translate-y-1 transition-transform cursor-pointer border border-transparent hover:border-outline-variant">
+                        <div class="flex justify-between items-start mb-6">
+                            <div class="bg-slate-100 p-3 rounded-lg">
+                                <span class="material-symbols-outlined text-slate-600">account_balance</span>
+                            </div>
+                            <span
+                                class="text-[10px] font-bold uppercase tracking-tighter text-slate-400 bg-slate-100 px-2 py-1 rounded">In
+                                Queue</span>
+                        </div>
+                        <h4 class="font-bold text-on-surface mb-1">NDA - Global Partners</h4>
+                        <p class="text-xs text-on-surface-variant mb-6">Uploaded 12 hours ago • 4 Pages</p>
+                        <div class="w-full bg-surface-container rounded-full h-1">
+                            <div class="bg-primary-container h-1 rounded-full w-[45%]"></div>
+                        </div>
+                        <p class="text-[10px] font-label text-primary-container mt-2 font-bold uppercase">Parsing
+                            Structure...</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+    <!-- Contextual FAB (Hidden by default unless in specialized view, but shown here for UI completeness) -->
+    <button
+        class="fixed bottom-10 right-10 w-16 h-16 bg-primary text-on-primary rounded-full flex items-center justify-center shadow-2xl hover:scale-110 active:scale-95 transition-all z-50">
+        <span class="material-symbols-outlined text-3xl">chat_bubble</span>
+    </button>
+    <script>
+        document.getElementById('fileUploadInput').addEventListener('change', async (e) => {
+            const file = e.target.files[0];
+            if (!file) return;
+
+            const uploadBtn = document.getElementById('uploadBtn');
+            const previewIframe = document.getElementById('document-preview');
+            const uploadUiContent = document.getElementById('upload-ui-content');
+            const loadingOverlay = document.getElementById('loading-overlay');
+            const loadingText = document.getElementById('loading-text');
+
+            previewIframe.src = URL.createObjectURL(file);
+            previewIframe.classList.remove('hidden');
+            uploadUiContent.classList.add('hidden');
+
+            loadingOverlay.classList.remove('hidden');
+            loadingText.innerText = "Analyzing doc with AI models...";
+
+            const formData = new FormData();
+            formData.append("file", file);
+
+            try {
+                const response = await fetch('/analyze', {
+                    method: 'POST',
+                    body: formData
+                });
+                if (!response.ok) {
+                    throw new Error("Analysis failed");
+                }
+                const data = await response.json();
+
+                renderTrafficLightReport(data);
+                loadingText.innerText = "Analysis Complete!";
+                setTimeout(() => { loadingOverlay.classList.add('hidden'); }, 1500);
+            } catch (err) {
+                console.error(err);
+                alert("Error analyzing document.");
+                loadingOverlay.classList.add('hidden');
+                uploadUiContent.classList.remove('hidden');
+                previewIframe.classList.add('hidden');
+            } finally {
+                e.target.value = ''; // reset
+            }
+        });
+
+        function renderTrafficLightReport(data) {
+            const reportContainer = document.getElementById('traffic-light-container');
+            reportContainer.innerHTML = ''; // clear mock
+
+            // update global sentiment
+            const globalTitle = document.getElementById('global-sentiment-title');
+            const globalDesc = document.getElementById('global-sentiment-desc');
+            globalTitle.innerText = data.flags_detected > 0 ? "High Risk Detected" : "Safe Document";
+            if (data.flags_detected > 0) {
+                globalTitle.classList.add("text-error");
+            } else {
+                globalTitle.classList.remove("text-error");
+            }
+            globalDesc.innerText = `Processed intelligently as a ${data.category} document. Found ${data.flags_detected} potential flags. Audit Score: ${data.overall_score}/100`;
+
+            data.report.forEach((item, index) => {
+                let hoverClass = "hover:bg-on-tertiary-container/10";
+                let bgLine = "bg-on-tertiary-container";
+                let bgPill = "bg-on-tertiary-container/20 text-on-tertiary-container";
+                let headerText = "Neutral/Safe Clause";
+
+                if (item.color === "Red") {
+                    hoverClass = "hover:bg-error-container/20";
+                    bgLine = "bg-error";
+                    bgPill = "bg-error-container text-error";
+                    headerText = "Predatory Flag Detected";
+                } else if (item.color === "Yellow") {
+                    hoverClass = "hover:bg-tertiary-fixed/20";
+                    bgLine = "bg-on-tertiary-fixed-variant";
+                    bgPill = "bg-tertiary-fixed text-on-tertiary-fixed";
+                    headerText = "Ambiguous Clause";
+                }
+
+                const html = `
+                <div class="group cursor-pointer mb-4">
+                    <div class="flex items-start gap-4 p-4 rounded-lg ${hoverClass} transition-colors">
+                        <div class="w-1.5 h-12 ${bgLine} rounded-full shrink-0 mt-1"></div>
+                        <div>
+                            <div class="flex items-center gap-2 mb-1">
+                                <span class="text-[10px] font-label font-bold uppercase tracking-widest px-2 py-0.5 rounded ${bgPill}">${item.status}</span>
+                                <span class="text-xs font-label text-on-surface-variant italic">Clause ${index + 1}</span>
+                            </div>
+                            <p class="text-sm font-semibold text-on-surface mb-1">${headerText}</p>
+                            <p class="text-xs text-on-surface-variant">${item.simplification}</p>
+                            ${item.hard_rule_flags.length > 0 ? `<p class="mt-2 text-xs font-bold text-error border-l-2 border-error pl-2">${item.hard_rule_flags.join('<br>')}</p>` : ''}
+                        </div>
+                    </div>
+                </div>`;
+                reportContainer.insertAdjacentHTML('beforeend', html);
+            });
+        }
+    </script>
+</body>
+
+</html>

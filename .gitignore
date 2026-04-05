@@ -1,0 +1,117 @@
+# ===========================
+# Python
+# ===========================
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyo
+*.pyd
+.Python
+*.egg
+*.egg-info/
+dist/
+build/
+eggs/
+parts/
+var/
+sdist/
+develop-eggs/
+.installed.cfg
+lib/
+lib64/
+*.so
+
+# ===========================
+# Virtual Environments
+# ===========================
+.venv/
+venv/
+ENV/
+env/
+env.bak/
+venv.bak/
+.unsloth/
+
+# ===========================
+# Environment Variables / Secrets
+# ===========================
+.env
+.env.*
+*.env
+secrets.json
+secrets.yaml
+
+# ===========================
+# IDE & Editor
+# ===========================
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# ===========================
+# FastAPI / Uvicorn
+# ===========================
+*.log
+logs/
+
+# ===========================
+# Machine Learning / AI
+# ===========================
+*.pt
+*.pth
+*.bin
+*.safetensors
+*.gguf
+*.onnx
+*.pkl
+*.h5
+models/
+checkpoints/
+runs/
+wandb/
+mlruns/
+
+# ===========================
+# Data Files
+# ===========================
+*.csv
+*.jsonl
+*.parquet
+*.arrow
+data/
+datasets/
+raw_data/
+
+# ===========================
+# Pinecone / Vector DB
+# ===========================
+pinecone_cache/
+
+# ===========================
+# Temporary & Upload Files
+# ===========================
+tmp/
+temp/
+uploads/
+*.tmp
+*.bak
+
+# ===========================
+# Node (if any frontend tools)
+# ===========================
+node_modules/
+npm-debug.log*
+package-lock.json
+
+# ===========================
+# OS
+# ===========================
+.DS_Store
+.AppleDouble
+.LSOverride
+Desktop.ini
+$RECYCLE.BIN/
