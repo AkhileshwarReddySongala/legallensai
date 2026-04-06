@@ -14,7 +14,7 @@ Information asymmetry is a crisis. For millions of non-native English speakers, 
 LegalLens AI moves beyond simple "wrappers" by utilizing a specialized pipeline of four distinct AI models orchestrated to prioritize safety and clarity:
 
 1.  **The Router (Qwen-VL):** A vision-language model that performs spatial OCR to understand document layouts. It identifies "fine print" hidden in margins and segments text into logical clauses.
-2.  **The Specialists (Fine-tuned Llama-3.1 & MedGemma):** Domain-specific experts fine-tuned via **Unsloth (LoRA)** on curated datasets (CUAD, README) to provide a consistent, helpful "Protector" voice.
+2.  **The Specialists (Fine-tuned Llama-3.1):** Domain-specific experts fine-tuned via **Unsloth (LoRA)** on curated datasets (CUAD, README) to provide a consistent, helpful "Protector" voice.
 3.  **The Hybrid RAG (Pinecone + NVIDIA):** A verified 50-state legal knowledge hub. We use **Pinecone Serverless** with integrated **NVIDIA embeddings** to ground the AI in real-world statutes and eliminate hallucinations.
 4.  **The Auditor (Qwen-2.5-72B):** A high-intelligence reasoning layer that cross-references AI outputs against deterministic Python guardrails to guarantee 100% factual integrity.
 
